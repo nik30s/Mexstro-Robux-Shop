@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mexstro – Robux Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background: #1e293b;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,255,128,0.2);
+    }
+    h1 { color: #22c55e; margin-bottom: 10px; }
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      background-color: #22c55e;
+      color: black;
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+      padding: 12px;
+      background: #22c55e;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    p.result {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #ffffff;
+    }
+    footer {
+      font-size: 12px;
+      margin-top: 15px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Shop Mexstro</h1>
+    <p>შეიყვანე რობუქსის რაოდენობა და ფასს გიჩვენებთ ლარში</p>
+
+    <input type="number" id="robux" placeholder="მაგ: 500" min="1">
+
+    <button onclick="calculatePrice()">გამოთვალე ₾</button>
+
+    <p class="result" id="result">ფასი: 0 ₾</p>
+
+    <p>📩 შეკვეთისთვის მომწერე:</p>
+    <a href="https://m.me/mexstro robux" target="_blank">mexstro robux</a>
+    <a href="https://www.tiktok.com/@mexstro3" target="_blank">mexstro3
+   </a>
+  </div>
+
+  <footer>
+    ⚠️ ეს საიტი არ არის დაკავშირებული Roblox Corporation-თან
+  </footer>
+
+  <script>
+    function calculatePrice() {
+      const robux = document.getElementById('robux').value;
+      const price = (robux / 100) * 1.40;
+      document.getElementById('result').innerText = `ფასი: ${price.toFixed(2)} ₾`;
+    }
+  </script>
+
+</body>
+</html>
